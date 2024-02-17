@@ -1,0 +1,2 @@
+!function(){var e=document.querySelector(".btn"),n=document.querySelector(".breed-select");e.addEventListener("click",(function(){try{e().then((function(e){return t=e.map((function(e){var n=e.id;return e.name,'<option value="'.concat(n,'"></option>')})).join(""),void n.insertAdjacentHTML("beforeend",t);var t}))}catch(e){console.log(e)}})),n.addEventListener("change",(function(e){console.log(e.target.value)}))}();
+//# sourceMappingURL=index.96096509.js.map
