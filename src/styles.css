@@ -32,13 +32,13 @@
   padding: 0;
   height: 100vh;
 }
-
+/* =================== FETCHING CAT ------------------ */
 .hidden {
   display: none;
 }
 .span-loader {
-  width: 48px;
-  height: 48px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   position: relative;
   animation: rotate 1s linear infinite;
@@ -78,4 +78,73 @@
   100% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
   }
+}
+.select-cat-breed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Dostosuj wysokość kontenera do potrzeb */
+}
+
+.breed-select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: black; /* Zmiana koloru tekstu na biały */
+  font-size: 16px;
+  width: 200px;
+  outline: none;
+  margin-bottom: 20px; /* Dodaj odstęp na dole */
+  position: relative; /* Dla poprawnego pozycjonowania ikony strzałki */
+}
+
+.breed-select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.breed-select:hover {
+  border-color: #a0522d;
+}
+
+.breed-select:active,
+.breed-select:focus {
+  border-color: #8b4513;
+}
+
+.cat-info {
+  text-align: center; /* Wyśrodkuj zawartość w poziomie */
+}
+
+.cat-details {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; /* Dodaj odstęp na dole */
+}
+
+.image-container {
+  margin-right: 20px;
+}
+
+.cat-image {
+  max-width: 400px;
+  height: auto;
+}
+
+.name {
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+  color: white; /* Zmiana koloru tekstu na biały */
+}
+
+.description,
+.temperament {
+  max-width: 400px;
+  color: white; /* Zmiana koloru tekstu na biały */
 }
